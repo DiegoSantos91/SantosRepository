@@ -16,6 +16,7 @@ namespace LibreriaNueva.Controllers
 
         public ActionResult Administracion() //administrador
         {
+            //vemos como cambia en git
             var repository = new LibroRepository();
             List<Libro> listado = repository.GetAllLibros();
 
