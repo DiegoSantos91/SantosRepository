@@ -1,0 +1,114 @@
+﻿@using LibreriaNueva.Controllers
+@model List<Entities.Libro>
+
+@{
+    ViewBag.Title = "Administracion";
+}
+
+<h2>Listado</h2>
+
+<nav class="navbar navbar-light bg-light">
+    <form class="form-inline my-2 my-lg-0">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Titulo</span>
+        </div>
+        <input class="form-control mr-sm-2" type="text" placeholder="¿ Que titulo busca ?">
+        <button class="btn btn-primary my-2 my-sm-0" type="submit">Buscar</button>
+    </form>
+    @*<form class="form-inline my-2 my-lg-0">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Titulo</span>
+            </div>
+
+            <input type="text" class="form-control" id="searchBox" placeholder="¿Que buscas?" aria-label="Libro" aria-describedby="basic-addon1"><br><br />
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit" id="searchButton" value="Buscar"></button>
+        </div>
+    </form>*@
+</nav>
+
+<div class="d-flex justify-content-center">
+    @{
+        Html.RenderPartial("LibrosGrid");
+    }
+
+    <br />
+    <div>
+        <span>Carácteristicas del libro</span>
+        <br />
+        <div class="caracteristicasLibro"></div><br />
+        Nombre:<span id="nombreLibro"></span>
+        Precio:<span id="precioLibro"></span>
+    </div><br /><br />
+
+</div>
+
+<script type="text/javascript">
+    $(".nombre").on("click", function () {
+        var self = $(this);
+        var idLibro = self.attr("value");
+        //alert(idLibro);
+        $.ajax({
+            type: "POST",
+            url: "/Home/GetLibroById",
+            datatype: "json",
+            data: {
+                id: idLibro
+            },
+            success: function (result) {
+
+                $("#nombreLibro").html("<p>" + result.Nombre + "</p>");
+                $("#precioLibro").html("<p>" + result.Precio + "</p>")
+            }
+        });
+    })
+    $(".precio").blur(function () {
+        var self = $(this);
+        var nuevoPrecio = self.val();
+        var idLibro = self.attr("idLibro");
+        //alert(idLibro);
+        $.ajax({
+            type: "POST",
+            url: "/Home/ModificarPrecio",
+            datatype: "json",
+            data: {
+                id: idLibro,
+                nuevoPrecio: nuevoPrecio
+            },
+            success: function (result) {
+
+                //evento de alerta o cambio
+            }
+        });
+
+    })
+
+
+     $("#searchButton").on("click", function () {
+            var searchTitle = $("#searchBox").val().toLowerCase();
+
+            $.ajax({
+            type: "POST",
+            url: "/Home/LibrosGrid",
+            data: {
+                    name: searchTitle
+            },
+            success: function (result) {
+                //refrescar la tabla
+                $("#librosGrid").html(result);
+            }
+            });
+            
+        });
+
+   
+       
+    
+
+
+    //evento para mostrar el nombre del precio que correspondia
+    //$(".precio").on("click", function () {
+    //    var self = $(this);
+    //    alert(self.attr("value"));
+    //})
+</script>

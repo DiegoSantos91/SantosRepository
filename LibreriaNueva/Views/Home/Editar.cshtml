@@ -1,0 +1,52 @@
+﻿@using LibreriaNueva.Controllers
+@model Entities.Libro
+
+@{
+    ViewBag.Title = "Editar";
+}
+<h2>@ViewBag.title</h2>
+
+@using (Html.BeginForm("Editar", "Home", FormMethod.Post))
+{
+
+    <div class="row">
+        <div class=" col-md-12">
+            @Html.HiddenFor(d => d.Id)
+            <div>
+                @Html.LabelFor(d => d.Nombre)
+                @Html.TextBoxFor(d => d.Nombre, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.Nombre, null, new { @class = "danger" })
+
+            </div>
+            <div>
+                @Html.EnumDropDownListFor(d => d.Status.StatusEnum, new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.Status.Id, null, new { @class = "danger" })
+
+            </div>
+            <div>
+                @Html.LabelFor(d => d.Precio)<br />
+                @Html.EditorFor(d => d.Precio, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.Precio, null, new { @class = "danger" })
+
+            </div>
+            <div>
+                @Html.LabelFor(d => d.Stock)<br />
+                @Html.EditorFor(d => d.Stock, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.Stock, null, new { @class = "danger" })
+
+            </div>
+            <div>
+                @Html.LabelFor(d => d.StockMax)<br />
+                @Html.EditorFor(d => d.StockMax, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.StockMax, null, new { @class = "danger" })
+
+            </div>
+            <br />
+
+            <div style="text-align:right;">
+                <input value="Guardar" class="btn btn-primary" type="submit" />
+            </div>
+        </div>
+
+    </div>
+}

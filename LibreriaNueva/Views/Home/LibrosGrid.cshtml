@@ -1,0 +1,49 @@
+﻿@using LibreriaNueva.Controllers
+@model List<Entities.Libro>
+
+@{
+    ViewBag.Title = "LibrosGrid";
+}
+
+    <table id="librosGrid" class=" table table-hover ">
+
+        <thead>
+            <tr class="text-dark">
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Acciones de Admin</th>
+                <th scope="col">Cliente </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var oElement in Model)
+            {
+                <tr>
+                    <td class="idLibro">@oElement.Id</td>
+                    <td><a class="nombre" value="@oElement.Id">@oElement.Nombre</a></td>
+                    <td>@oElement.Stock</td>
+                    <td>@Html.TextBoxFor(d => oElement.Precio, "", new { @class = "precio", @idLibro = oElement.Id })</td>
+                    @*<td>@oElement.Status.Id</td>*@
+                    <td>
+                        <a class="btn btn-info" href="~/Home/Editar/@oElement.Id">Editar</a>
+                        <a class="btn btn-danger" href="~/Home/Eliminar/@oElement.Id">Eliminar</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-success" href="~/Home/Alquilar/@oElement.Id">Alquilar</a>
+                        <a class="btn btn-primary" href="">Devolver</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+    <div class="row" style="text-align:left ;padding:  inherit">
+        <a href="~/Home/NuevoLibro" class=" btn btn-warning"> Agregar Libro </a>
+    </div>
+
+<script type="text/javascript">
+    
+</script>

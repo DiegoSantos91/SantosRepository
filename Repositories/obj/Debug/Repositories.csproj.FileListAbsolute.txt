@@ -1,0 +1,16 @@
+Z:\PatoTrain\LibreriaNueva\Repositories\bin\Debug\Repositories.dll.config
+Z:\PatoTrain\LibreriaNueva\Repositories\bin\Debug\Repositories.dll
+Z:\PatoTrain\LibreriaNueva\Repositories\bin\Debug\Repositories.pdb
+Z:\PatoTrain\LibreriaNueva\Repositories\bin\Debug\ClassLibrary1.dll
+Z:\PatoTrain\LibreriaNueva\Repositories\bin\Debug\Entities.dll
+Z:\PatoTrain\LibreriaNueva\Repositories\bin\Debug\EntityFramework.dll
+Z:\PatoTrain\LibreriaNueva\Repositories\bin\Debug\EntityFramework.SqlServer.dll
+Z:\PatoTrain\LibreriaNueva\Repositories\bin\Debug\ClassLibrary1.pdb
+Z:\PatoTrain\LibreriaNueva\Repositories\bin\Debug\ClassLibrary1.dll.config
+Z:\PatoTrain\LibreriaNueva\Repositories\bin\Debug\Entities.pdb
+Z:\PatoTrain\LibreriaNueva\Repositories\bin\Debug\EntityFramework.xml
+Z:\PatoTrain\LibreriaNueva\Repositories\bin\Debug\EntityFramework.SqlServer.xml
+Z:\PatoTrain\LibreriaNueva\Repositories\obj\Debug\Repositories.csprojAssemblyReference.cache
+Z:\PatoTrain\LibreriaNueva\Repositories\obj\Debug\Repositories.csproj.CopyComplete
+Z:\PatoTrain\LibreriaNueva\Repositories\obj\Debug\Repositories.dll
+Z:\PatoTrain\LibreriaNueva\Repositories\obj\Debug\Repositories.pdb

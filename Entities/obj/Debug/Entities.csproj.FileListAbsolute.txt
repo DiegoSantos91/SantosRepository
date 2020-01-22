@@ -1,0 +1,4 @@
+Z:\PatoTrain\LibreriaNueva\Entities\bin\Debug\Entities.dll
+Z:\PatoTrain\LibreriaNueva\Entities\bin\Debug\Entities.pdb
+Z:\PatoTrain\LibreriaNueva\Entities\obj\Debug\Entities.dll
+Z:\PatoTrain\LibreriaNueva\Entities\obj\Debug\Entities.pdb

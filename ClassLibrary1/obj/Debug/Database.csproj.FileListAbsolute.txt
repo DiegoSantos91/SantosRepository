@@ -1,0 +1,10 @@
+Z:\PatoTrain\LibreriaNueva\ClassLibrary1\bin\Debug\ClassLibrary1.dll.config
+Z:\PatoTrain\LibreriaNueva\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+Z:\PatoTrain\LibreriaNueva\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+Z:\PatoTrain\LibreriaNueva\ClassLibrary1\bin\Debug\EntityFramework.dll
+Z:\PatoTrain\LibreriaNueva\ClassLibrary1\bin\Debug\EntityFramework.SqlServer.dll
+Z:\PatoTrain\LibreriaNueva\ClassLibrary1\bin\Debug\EntityFramework.xml
+Z:\PatoTrain\LibreriaNueva\ClassLibrary1\bin\Debug\EntityFramework.SqlServer.xml
+Z:\PatoTrain\LibreriaNueva\ClassLibrary1\obj\Debug\Database.csproj.CopyComplete
+Z:\PatoTrain\LibreriaNueva\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+Z:\PatoTrain\LibreriaNueva\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
